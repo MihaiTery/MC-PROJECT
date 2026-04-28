@@ -29,7 +29,7 @@ export default function Header() {
             </div>
             <div className="hidden sm:block">
               <p className="font-extrabold text-slate-900 text-sm leading-tight">
-                Primăria Digitală
+                CityDock Digital
               </p>
               <p className="text-blue-600 text-xs font-semibold">Ușor de implementat</p>
             </div>
