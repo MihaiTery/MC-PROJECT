@@ -1,5 +1,5 @@
 ### IntelliJ IDEA ###
-docs/
+
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
