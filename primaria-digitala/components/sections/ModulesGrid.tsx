@@ -11,11 +11,11 @@ export default function ModulesGrid() {
             Modulele platformei
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-            8 module care transformă primăria ta
+            8 module care transformă orice organizație
           </h2>
           <p className="text-lg text-slate-600">
-            Fiecare modul rezolvă o problemă reală, imediat. Poți activa unul sau toate. Plătești
-            doar ce folosești.
+            Fiecare modul rezolvă o problemă reală, imediat. Clienții pot activa unul sau toate.
+            Plătești doar ce folosești — exemplul nostru principal de implementare: primăriile.
           </p>
         </div>
 

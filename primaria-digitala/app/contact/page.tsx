@@ -3,9 +3,9 @@ import { Phone, Mail, Clock, Shield } from 'lucide-react'
 import ContactForm from '@/components/ui/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact & Demo',
+  title: 'Contact & Prezentare',
   description:
-    'Solicită un demo gratuit sau o ofertă personalizată pentru digitalizarea primăriei tale.',
+    'Solicită o prezentare gratuită sau o ofertă personalizată pentru digitalizarea organizației tale.',
 }
 
 const trustItems = [
@@ -18,16 +18,15 @@ const trustItems = [
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
       <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-14 md:py-20">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-              Hai să vorbim despre primăria ta
+              Hai să vorbim despre organizația ta
             </h1>
             <p className="text-blue-200 text-lg">
-              Fără jargon tehnic, fără presiune. Doar o discuție despre ce poți îmbunătăți și cum te
-              putem ajuta.
+              Fără jargon tehnic, fără presiune. Doar o discuție despre ce poate fi îmbunătățit
+              și cum putem ajuta.
             </p>
           </div>
         </div>
@@ -36,7 +35,6 @@ export default function ContactPage() {
       <section className="section bg-slate-50">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 max-w-5xl mx-auto">
-            {/* Left info */}
             <div className="lg:col-span-2 space-y-6">
               <div>
                 <h2 className="text-xl font-bold text-slate-800 mb-2">Contactează-ne direct</h2>
@@ -95,17 +93,16 @@ export default function ContactPage() {
                 <p className="text-sm font-semibold text-blue-800 mb-1">Program consultanți</p>
                 <p className="text-sm text-blue-700">Luni – Vineri: 09:00 – 18:00</p>
                 <p className="text-xs text-blue-500 mt-2">
-                  Formularele trimise în weekend sunt procesate luni dimineața.
+                  Solicitările trimise în weekend sunt procesate luni dimineața.
                 </p>
               </div>
             </div>
 
-            {/* Form */}
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
                 <h2 className="text-xl font-bold text-slate-800 mb-1">Trimite-ne o solicitare</h2>
                 <p className="text-slate-500 text-sm mb-6">
-                  Completează formularul și te contactăm în maximum 24 de ore.
+                  Completează formularul și te contactăm în maximum 24 de ore cu o propunere adaptată.
                 </p>
                 <ContactForm />
               </div>

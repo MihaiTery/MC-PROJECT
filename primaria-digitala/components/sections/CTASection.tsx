@@ -8,8 +8,8 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  title = 'Activează digitalizarea primăriei tale',
-  subtitle = 'Hai să vorbim. Fără angajamente, fără jargon tehnic. Doar soluții clare pentru primăria ta.',
+  title = 'Hai să discutăm despre organizația ta',
+  subtitle = 'Fără angajamente, fără jargon tehnic. Doar soluții clare pentru nevoile reale ale clientului.',
   variant = 'default',
 }: CTASectionProps) {
   if (variant === 'light') {
@@ -21,7 +21,7 @@ export default function CTASection({
             <p className="text-slate-600 mb-8">{subtitle}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="lg">
-                Solicită demo gratuit
+                Solicită o prezentare
                 <ArrowRight className="w-4 h-4" />
               </Button>
               <Button href="/pricing" variant="outline" size="lg">
@@ -42,7 +42,7 @@ export default function CTASection({
       <div className="relative container">
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-            Fii printre primii
+            Lucrăm cu organizații din toată România
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">{title}</h2>
           <p className="text-xl text-blue-200 mb-10 max-w-2xl mx-auto">{subtitle}</p>
@@ -53,7 +53,7 @@ export default function CTASection({
               size="xl"
               className="bg-green-500 hover:bg-green-400 text-white font-bold shadow-lg shadow-green-500/30"
             >
-              Solicită demo gratuit
+              Solicită o prezentare gratuită
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button
@@ -84,7 +84,7 @@ export default function CTASection({
           </div>
 
           <p className="text-blue-300 text-xs mt-6">
-            Răspundem în maximum 24 de ore · Fără obligații · Ofertă personalizată per comună
+            Răspundem în maximum 24 de ore · Fără obligații · Ofertă personalizată per client
           </p>
         </div>
       </div>

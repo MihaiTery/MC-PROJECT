@@ -11,13 +11,13 @@ const problems = [
   {
     icon: Phone,
     title: 'Telefoane repetitive',
-    description: 'Aceleași întrebări despre program, taxe și acte, care consumă timpul funcționarilor.',
+    description: 'Aceleași întrebări despre program, taxe și acte, care consumă timpul echipelor.',
     color: 'text-orange-500',
     bg: 'bg-orange-50',
   },
   {
     icon: AlertCircle,
-    title: 'Sesizări pierdute',
+    title: 'Solicitări pierdute',
     description: 'Reclamații și sesizări care ajung pe hârtii volante și dispar fără rezolvare.',
     color: 'text-rose-500',
     bg: 'bg-rose-50',
@@ -25,21 +25,21 @@ const problems = [
   {
     icon: Clock,
     title: 'Timp pierdut la ghișeu',
-    description: 'Cetățeni care vin fizic pentru cereri simple care ar putea fi rezolvate online.',
+    description: 'Beneficiari care vin fizic pentru cereri simple ce pot fi rezolvate online.',
     color: 'text-amber-500',
     bg: 'bg-amber-50',
   },
   {
     icon: Building2,
     title: 'Presiunea digitalizării',
-    description: 'Legi și reglementări care impun digitalizarea, dar fără buget sau suport tehnic.',
+    description: 'Reglementări care impun digitalizarea, fără buget sau suport tehnic adecvat.',
     color: 'text-violet-500',
     bg: 'bg-violet-50',
   },
   {
     icon: Frown,
-    title: 'Cetățeni nemulțumiți',
-    description: 'Lipsa comunicării clare și a transparenței duce la frustrare în comunitate.',
+    title: 'Beneficiari nemulțumiți',
+    description: 'Lipsa comunicării clare și a transparenței duce la frustrare și neîncredere.',
     color: 'text-slate-500',
     bg: 'bg-slate-50',
   },
@@ -54,13 +54,13 @@ export default function ProblemSection() {
             Provocarea
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-            Primăriile sunt prinse între{' '}
+            Instituțiile sunt prinse între{' '}
             <span className="text-red-600">hârtie, telefoane</span> și presiunea digitalizării
           </h2>
           <p className="text-lg text-slate-600">
-            Funcționarii publici din comune mici se confruntă zilnic cu o realitate dificilă:
-            solicitări în creștere, resurse limitate și o nevoie urgentă de modernizare — dar fără
-            soluții accesibile, simple și rapide.
+            Echipele din organizații publice — primării, instituții locale, entități administrative
+            — se confruntă zilnic cu o realitate dificilă: solicitări în creștere, resurse limitate
+            și o nevoie urgentă de modernizare, fără soluții accesibile și rapide.
           </p>
         </div>
 
@@ -86,8 +86,8 @@ export default function ProblemSection() {
             „Știm că digitalizarea e necesară, dar nu știm de unde să începem."
           </p>
           <p className="text-slate-600">
-            Aceasta este realitatea majorității primarilor și secretarilor generali din România.
-            Primăria Digitală Plug & Play există tocmai pentru a schimba asta.
+            Aceasta este realitatea majorității organizațiilor publice cu care lucrăm — primării,
+            instituții locale, entități administrative. Suntem aici tocmai pentru a schimba asta.
           </p>
         </div>
       </div>

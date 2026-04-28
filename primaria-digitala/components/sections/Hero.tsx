@@ -12,16 +12,14 @@ const stats = [
 
 const highlights = [
   'Funcționează pe WhatsApp și Telegram',
-  'Prețuri accesibile pentru comune mici',
+  'Prețuri accesibile pentru organizații mici',
   'Implementare fără echipă IT internă',
 ]
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white">
-      {/* Grid background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-100" />
-      {/* Accent circle */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
 
@@ -29,12 +27,12 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           <Badge variant="green" className="mb-6 bg-green-500/20 border-green-400/30 text-green-300">
             <Star className="w-3.5 h-3.5" />
-            Soluție construită special pentru comune mici din România
+            Soluție pentru instituții și organizații publice din România
           </Badge>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight tracking-tight">
-            Digitalizează primăria ta{' '}
-            <span className="text-green-400">în 30 de zile</span>
+            Digitalizăm instituțiile{' '}
+            <span className="text-green-400">rapid și fără complicații</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-blue-200 mb-4 max-w-3xl mx-auto leading-relaxed">
@@ -42,8 +40,9 @@ export default function Hero() {
           </p>
 
           <p className="text-blue-300 mb-10 max-w-2xl mx-auto">
-            O suită de module digitale plug & play care transformă modul în care primăria ta
-            comunică cu cetățenii și gestionează activitatea internă.
+            O suită de module digitale plug & play care transformă modul în care organizațiile
+            publice comunică cu cetățenii și gestionează activitatea internă.
+            Primăriile sunt printre primii noștri clienți.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
@@ -53,7 +52,7 @@ export default function Hero() {
               variant="secondary"
               className="bg-green-500 hover:bg-green-400 text-white font-bold shadow-lg shadow-green-500/30"
             >
-              Solicită demo gratuit
+              Solicită o prezentare
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button
@@ -76,7 +75,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
           {stats.map((s) => (
             <div
@@ -90,7 +88,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 80L1440 80L1440 20C1200 70 720 -10 0 40L0 80Z" fill="white" />

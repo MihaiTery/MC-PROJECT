@@ -9,17 +9,12 @@ import { annualBenefits } from '@/config/pricing'
 export const metadata: Metadata = {
   title: 'Prețuri',
   description:
-    'Prețuri transparente pentru digitalizarea primăriei. Module individuale sau bundle complet. Plată lunară sau anuală cu 17% reducere.',
+    'Prețuri transparente pentru digitalizarea organizației. Module individuale sau bundle complet. Plată lunară sau anuală cu 17% reducere.',
 }
-
-const pricingFaqItems = faqItems.filter(
-  (f) => f.category === 'pricing' || f.question.toLowerCase().includes('preț')
-)
 
 export default function PricingPage() {
   return (
     <>
-      {/* Hero */}
       <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white py-16 md:py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
@@ -27,11 +22,11 @@ export default function PricingPage() {
               Prețuri transparente
             </span>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-              Alegi exact ce ai nevoie
+              Clientul alege exact ce are nevoie
             </h1>
             <p className="text-blue-200 text-xl mb-6">
-              Fiecare modul individual sau toate împreună cu discount semnificativ.
-              Fără costuri ascunse.
+              Module individuale sau toate împreună cu discount semnificativ.
+              Fără costuri ascunse, fără surprize.
             </p>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
               {annualBenefits.map((b) => (
@@ -45,19 +40,17 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Pricing grid */}
       <section className="section bg-slate-50">
         <div className="container">
           <PricingGrid />
         </div>
       </section>
 
-      {/* Value comparison */}
       <section className="section-sm bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-slate-900 text-center mb-8">
-              Ce primești față de soluțiile tradiționale
+              Ce primește clientul față de soluțiile tradiționale
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -68,7 +61,7 @@ export default function PricingPage() {
                       Soluții tradiționale
                     </th>
                     <th className="text-center py-3 px-4 bg-blue-700 text-white font-semibold rounded-t-xl">
-                      Primăria Digitală
+                      Platforma noastră
                     </th>
                   </tr>
                 </thead>
@@ -83,10 +76,7 @@ export default function PricingPage() {
                     ['Suport', 'Prin bilete', 'Telefon + email'],
                     ['Upgrade module', 'Reproiect nou', 'Cu un click'],
                   ].map(([feature, traditional, ours], i) => (
-                    <tr
-                      key={feature}
-                      className={i % 2 === 0 ? 'bg-slate-50' : 'bg-white'}
-                    >
+                    <tr key={feature} className={i % 2 === 0 ? 'bg-slate-50' : 'bg-white'}>
                       <td className="py-3 px-4 font-medium text-slate-700">{feature}</td>
                       <td className="py-3 px-4 text-center text-slate-500">{traditional}</td>
                       <td className="py-3 px-4 text-center bg-blue-50 text-blue-700 font-semibold">
@@ -101,7 +91,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* FAQ pricing specific */}
       <FAQSection
         items={faqItems.filter((f) => f.category === 'pricing')}
         title="Întrebări despre prețuri"
@@ -110,8 +99,8 @@ export default function PricingPage() {
       />
 
       <CTASection
-        title="Solicită o ofertă personalizată pentru primăria ta"
-        subtitle="Dimensiunea comunei, modulele necesare și bugetul disponibil – îți construim o ofertă adaptată."
+        title="Solicită o ofertă personalizată"
+        subtitle="Dimensiunea organizației, modulele necesare și bugetul disponibil — construim o ofertă adaptată fiecărui client."
       />
     </>
   )

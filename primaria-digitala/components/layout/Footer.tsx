@@ -6,14 +6,14 @@ const footerLinks = {
   platform: [
     { label: 'Toate modulele', href: '/#module' },
     { label: 'Prețuri', href: '/pricing' },
-    { label: 'Plug & Play', href: '/#plug-play' },
+    { label: 'Implementare', href: '/#plug-play' },
     { label: 'Beneficii', href: '/#beneficii' },
     { label: 'FAQ', href: '/#faq' },
   ],
   company: [
     { label: 'Despre noi', href: '/contact' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Solicită demo', href: '/contact' },
+    { label: 'Solicită prezentare', href: '/contact' },
     { label: 'Cere ofertă', href: '/contact' },
   ],
   legal: [
@@ -27,9 +27,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400">
       <div className="container">
-        {/* Main footer */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center">
@@ -44,8 +42,8 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm leading-relaxed mb-6 max-w-xs">
-              Soluție SaaS modulară pentru digitalizarea primăriilor mici din România. Fără
-              infrastructură complicată, fără costuri mari.
+              Platformă SaaS modulară pentru digitalizarea instituțiilor și organizațiilor publice
+              din România. Primăriile sunt clientul nostru principal — dar nu singurul.
             </p>
 
             <div className="space-y-2.5">
@@ -70,7 +68,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Module links */}
           <div>
             <h4 className="text-white font-semibold text-sm mb-4">Module</h4>
             <ul className="space-y-2.5">
@@ -87,7 +84,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Platform links */}
           <div>
             <h4 className="text-white font-semibold text-sm mb-4">Platformă</h4>
             <ul className="space-y-2.5">
@@ -112,18 +108,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* CTA box */}
           <div>
             <div className="bg-blue-900/50 border border-blue-800/50 rounded-2xl p-5">
-              <h4 className="text-white font-bold mb-2">Gata să începi?</h4>
+              <h4 className="text-white font-bold mb-2">Lucrăm împreună?</h4>
               <p className="text-sm text-blue-300 mb-4">
-                Solicită un demo gratuit și vezi cum funcționează pentru primăria ta.
+                Solicită o prezentare gratuită și discutăm despre nevoile organizației tale.
               </p>
               <Link
                 href="/contact"
                 className="block text-center bg-blue-600 text-white text-sm font-semibold px-4 py-2.5 rounded-xl hover:bg-blue-500 transition-colors"
               >
-                Solicită demo
+                Solicită prezentare
               </Link>
             </div>
 
@@ -140,11 +135,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-slate-800 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs">
-            © {new Date().getFullYear()} Primăria Digitală Plug & Play. Toate drepturile
-            rezervate.
+            © {new Date().getFullYear()} Primăria Digitală Plug & Play. Toate drepturile rezervate.
           </p>
           <p className="text-xs">
             Construit cu ❤️ pentru administrația publică din România

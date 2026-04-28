@@ -6,7 +6,7 @@ const steps = [
     icon: PhoneCall,
     title: 'Discuție inițială',
     description:
-      'Ne suni sau completezi formularul. Înțelegem nevoile primăriei tale și îți propunem modulele potrivite.',
+      'Clientul ne contactează sau completează formularul. Înțelegem nevoile organizației și propunem modulele potrivite.',
     duration: '30 minute',
   },
   {
@@ -14,7 +14,7 @@ const steps = [
     icon: Settings,
     title: 'Configurare și personalizare',
     description:
-      'Echipa noastră configurează modulele cu datele și modelele primăriei tale. Fără implicare tehnică din partea ta.',
+      'Echipa noastră configurează modulele cu datele și modelele clientului. Fără implicare tehnică din partea acestuia.',
     duration: '5–10 zile',
   },
   {
@@ -22,15 +22,15 @@ const steps = [
     icon: Rocket,
     title: 'Lansare și training scurt',
     description:
-      'O sesiune online de 2 ore cu echipa primăriei. Explicăm tot, răspundem la orice întrebare.',
+      'O sesiune online de 2 ore cu echipa clientului. Explicăm tot, răspundem la orice întrebare, fără jargon tehnic.',
     duration: '1–2 zile',
   },
   {
     step: '04',
     icon: Smile,
-    title: 'Funcționezi. Îți rămânem alături.',
+    title: 'Live. Rămânem alături.',
     description:
-      'Primăria ta e digitalizată. Noi monitorizăm sistemul și suntem disponibili oricând prin telefon și email.',
+      'Organizația clientului e digitalizată. Monitorizăm sistemul și suntem disponibili oricând prin telefon și email.',
     duration: 'Ongoing',
   },
 ]
@@ -44,17 +44,16 @@ export default function PlugAndPlaySection() {
             Plug & Play
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-            De la decizie la primărie digitalizată{' '}
+            De la prima discuție la organizație digitalizată{' '}
             <span className="text-blue-600">în 30 de zile</span>
           </h2>
           <p className="text-lg text-slate-600">
-            Procesul nostru este simplu, rapid și complet gestionat de echipa noastră. Tu te
-            concentrezi pe administrarea comunei, noi ne ocupăm de tehnologie.
+            Procesul nostru este simplu, rapid și complet gestionat de echipa noastră.
+            Clientul se concentrează pe activitatea sa, noi ne ocupăm de tehnologie.
           </p>
         </div>
 
         <div className="relative">
-          {/* Connector line */}
           <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
