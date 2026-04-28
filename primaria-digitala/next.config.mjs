@@ -6,8 +6,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Dacă publici pe username.github.io/nume-repo, decomentează și modifică:
-  // basePath: '/nume-repo',
+  // Publicat pe mihaitery.github.io/MC-PROJECT
+  basePath: '/MC-PROJECT',
 }
 
 export default nextConfig
