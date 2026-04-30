@@ -1,4 +1,4 @@
-name: Deploy Primaria Digitala to GitHub Pages
+name: Deploy Platforma Institutionala to GitHub Pages
 
 on:
   push:
@@ -28,18 +28,18 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: primaria-digitala/package-lock.json
+          cache-dependency-path: platforma-institutionala/package-lock.json
 
       - name: Install dependencies
         run: npm ci
-        working-directory: primaria-digitala
+        working-directory: platforma-institutionala
 
       - name: Build static export
         run: npm run build
-        working-directory: primaria-digitala
+        working-directory: platforma-institutionala
 
       - name: Add .nojekyll
-        run: touch primaria-digitala/out/.nojekyll
+        run: touch platforma-institutionala/out/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: primaria-digitala/out
+          path: platforma-institutionala/out
 
   deploy:
     environment:
