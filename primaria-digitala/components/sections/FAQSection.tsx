@@ -48,7 +48,7 @@ interface FAQSectionProps {
 export default function FAQSection({
   items = faqItems,
   title = 'Întrebări frecvente',
-  subtitle = 'Răspunsuri clare la cele mai comune întrebări despre Primăria Digitală Plug & Play.',
+  subtitle = 'Răspunsuri clare la cele mai frecvente întrebări despre platformă și implementare.',
   showCTA = true,
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0)

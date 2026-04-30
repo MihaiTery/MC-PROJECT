@@ -8,22 +8,25 @@ const inter = Inter({ subsets: ['latin', 'latin-ext'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Primăria Digitală Plug & Play',
-    template: '%s | Primăria Digitală Plug & Play',
+    default: 'Platformă Digitală Instituțională',
+    template: '%s | Platformă Digitală Instituțională',
   },
   description:
-    'Digitalizarea primăriei tale, fără infrastructură complicată, fără training greu, fără costuri mari. Soluții modulare pentru comune și orașe mici din România.',
+    'Platformă SaaS modulară pentru digitalizarea instituțiilor publice și a organizațiilor cu rol administrativ sau juridic. Implementare rapidă, fără infrastructură complexă.',
   keywords: [
-    'digitalizare primărie',
-    'software primărie',
-    'comune mici România',
-    'administrație publică digitală',
+    'digitalizare instituții publice',
+    'software administrație publică',
+    'platformă SaaS instituțională',
+    'digitalizare organizații',
     'e-guvernare',
-    'SaaS B2G',
+    'sesizări digitale',
+    'monitorizare publică',
+    'arhivă digitală',
   ],
   openGraph: {
-    title: 'Primăria Digitală Plug & Play',
-    description: 'Digitalizarea primăriei tale, simplu și rapid.',
+    title: 'Platformă Digitală Instituțională',
+    description:
+      'Platformă SaaS modulară pentru digitalizarea instituțiilor publice și a organizațiilor cu rol administrativ sau juridic.',
     locale: 'ro_RO',
     type: 'website',
   },

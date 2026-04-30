@@ -1,48 +1,71 @@
-import { totalMonthlyIndividual, totalAnnualIndividual } from './modules'
-
-export interface BundlePricing {
+export interface SubscriptionTier {
+  year: string
   monthly: number
-  annual: number
-  savingsMonthly: number
-  savingsAnnual: number
-  savingsPercentMonthly: number
-  savingsPercentAnnual: number
+  label: string
+  note?: string
 }
 
-export const bundlePricing: BundlePricing = {
-  monthly: 399,
-  annual: 332,
-  savingsMonthly: totalMonthlyIndividual - 399,
-  savingsAnnual: totalAnnualIndividual - 332,
-  savingsPercentMonthly: Math.round(((totalMonthlyIndividual - 399) / totalMonthlyIndividual) * 100),
-  savingsPercentAnnual: Math.round(((totalAnnualIndividual - 332) / totalAnnualIndividual) * 100),
+export const subscriptionTiers: SubscriptionTier[] = [
+  {
+    year: 'Anul 1',
+    monthly: 200,
+    label: 'Abonament subvenționat',
+    note: 'Primul an beneficiază de abonament subvenționat',
+  },
+  {
+    year: 'Anul 2',
+    monthly: 300,
+    label: 'Abonament standard',
+  },
+  {
+    year: 'Din anul 3',
+    monthly: 400,
+    label: 'Abonament complet',
+  },
+]
+
+export interface HardwarePricing {
+  monthly: number
+  includes: string[]
 }
 
-export const pricingFeatures = {
-  bundle: [
-    'Toate cele 8 module incluse',
-    'Implementare prioritară în 14 zile',
-    'Manager de cont dedicat',
-    'Training online pentru echipă',
-    'Suport tehnic premium 24/7',
-    'Actualizări gratuite incluse',
-    'Rapoarte lunare de activitate',
-    'Personalizare după modelele primăriei',
+export const hardwarePricing: HardwarePricing = {
+  monthly: 100,
+  includes: [
+    'Scanner profesional în locație',
+    'Backup fizic local',
+    'Garanție hardware',
+    'Mentenanță inclusă',
   ],
-  individual: [
-    'Implementare în 30 de zile',
-    'Training online inclus',
-    'Suport tehnic în zile lucrătoare',
-    'Actualizări incluse',
-    'Posibilitate de upgrade oricând',
-  ],
+}
+
+export interface ScanningPricing {
+  initial: number
+  initialDocs: number
+  extraPer: number
+  extraDocs: number
+}
+
+export const scanningPricing: ScanningPricing = {
+  initial: 500,
+  initialDocs: 25000,
+  extraPer: 100,
+  extraDocs: 5000,
 }
 
 export const annualBenefits = [
   'Plătești 10 luni, primești 12',
-  'Economisești 2 luni pe an per modul',
-  'Factură anuală unică, fără griji',
+  'Factură anuală unică, fără griji administrative',
   'Prioritate la funcționalități noi',
+  'Manager de cont dedicat',
 ]
 
-export const startingPrice = 49
+export const packageFeatures = [
+  'Toate cele 7 componente incluse',
+  'Implementare în 14–30 de zile',
+  'Configurare completă de către echipa noastră',
+  'Sesiune de prezentare pentru echipă (2 ore)',
+  'Suport tehnic în zile lucrătoare',
+  'Actualizări incluse pe durata abonamentului',
+  'Stocare date în UE, conformitate GDPR',
+]

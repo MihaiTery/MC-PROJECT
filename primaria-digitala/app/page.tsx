@@ -1,11 +1,13 @@
 import Hero from '@/components/sections/Hero'
-import ProblemSection from '@/components/sections/ProblemSection'
-import SolutionSection from '@/components/sections/SolutionSection'
-import ModulesGrid from '@/components/sections/ModulesGrid'
-import WhySmallTowns from '@/components/sections/WhySmallTowns'
-import PlugAndPlaySection from '@/components/sections/PlugAndPlaySection'
-import BenefitsSection from '@/components/sections/BenefitsSection'
-import PricingPreview from '@/components/sections/PricingPreview'
+import ForWhoSection from '@/components/sections/ProblemSection'
+import PackageSection from '@/components/sections/SolutionSection'
+import ReportsSection from '@/components/sections/ReportsSection'
+import CommunicationSection from '@/components/sections/CommunicationSection'
+import MonitoringSection from '@/components/sections/MonitoringSection'
+import DocumentsSection from '@/components/sections/DocumentsSection'
+import HardwareSection from '@/components/sections/HardwareSection'
+import SubscriptionSection from '@/components/sections/PricingPreview'
+import ImplementationSection from '@/components/sections/PlugAndPlaySection'
 import FAQSection from '@/components/sections/FAQSection'
 import CTASection from '@/components/sections/CTASection'
 
@@ -13,13 +15,15 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ProblemSection />
-      <SolutionSection />
-      <ModulesGrid />
-      <WhySmallTowns />
-      <PlugAndPlaySection />
-      <BenefitsSection />
-      <PricingPreview />
+      <ForWhoSection />
+      <PackageSection />
+      <ReportsSection />
+      <CommunicationSection />
+      <MonitoringSection />
+      <DocumentsSection />
+      <HardwareSection />
+      <SubscriptionSection />
+      <ImplementationSection />
       <FAQSection />
       <CTASection />
     </>

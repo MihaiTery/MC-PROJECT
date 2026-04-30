@@ -1,94 +1,54 @@
-import { Puzzle, Zap, Shield, Users } from 'lucide-react'
+import Link from 'next/link'
+import { modules } from '@/config/modules'
+import ModuleCard from '@/components/ui/ModuleCard'
 
-const pillars = [
-  {
-    icon: Puzzle,
-    title: 'Modular',
-    description: 'Clientul alege doar modulele de care are nevoie. Plătește doar ce folosește.',
-    color: 'text-blue-600',
-    bg: 'bg-blue-50',
-  },
-  {
-    icon: Zap,
-    title: 'Rapid',
-    description: 'Implementare în 14–30 de zile. Zero infrastructură complexă necesară.',
-    color: 'text-green-600',
-    bg: 'bg-green-50',
-  },
-  {
-    icon: Shield,
-    title: 'Sigur',
-    description: 'Date stocate în UE, conformitate GDPR, backup automat zilnic.',
-    color: 'text-violet-600',
-    bg: 'bg-violet-50',
-  },
-  {
-    icon: Users,
-    title: 'Familiar',
-    description: 'Funcționează pe WhatsApp și Telegram — canale deja cunoscute de utilizatori.',
-    color: 'text-amber-600',
-    bg: 'bg-amber-50',
-  },
-]
-
-export default function SolutionSection() {
+export default function PackageSection() {
   return (
-    <section className="section bg-slate-50" id="solutie">
+    <section className="section bg-slate-50" id="pachet">
       <div className="container">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block text-green-600 font-semibold text-sm uppercase tracking-widest mb-3">
-                Soluția
-              </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-5 leading-tight">
-                O suită modulară pe care o implementăm rapid,{' '}
-                <span className="text-green-600">pe canale deja cunoscute</span>
-              </h2>
-              <p className="text-lg text-slate-600 mb-6">
-                Platforma noastră oferă module digitale pe care le activăm pentru clienți pe rând,
-                fără a schimba tot ce funcționează deja. Fiecare modul rezolvă o problemă concretă,
-                imediat. Primăriile sunt printre clienții noștri principali — dar nu singurii.
-              </p>
+        <div className="max-w-3xl mx-auto text-center mb-14">
+          <span className="inline-block text-blue-700 font-semibold text-sm uppercase tracking-widest mb-3">
+            Pachet unic — Platformă Digitală Instituțională
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Un singur pachet. Toate componentele incluse.
+          </h2>
+          <p className="text-lg text-slate-600">
+            Platforma reunește 7 componente integrate într-un abonament unic. Nu există module
+            separate sau costuri adiționale per funcționalitate.
+          </p>
+        </div>
 
-              <div className="space-y-3 mb-8">
-                {[
-                  'Nu e nevoie de un departament IT intern la client',
-                  'Echipele învață în 2 ore, nu 2 săptămâni',
-                  'Beneficiarii folosesc WhatsApp și Telegram, deja instalate',
-                  'Prețuri clare, fără surprize, fără costuri ascunse',
-                  'Scalabil: adăugăm module pe măsură ce clientul crește',
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-slate-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-12">
+          {modules.map((module) => (
+            <ModuleCard key={module.id} module={module} />
+          ))}
+        </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {pillars.map((p) => (
-                <div
-                  key={p.title}
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
-                >
-                  <div className={`p-3 rounded-xl ${p.bg} inline-flex mb-4`}>
-                    <p.icon className={`w-6 h-6 ${p.color}`} />
-                  </div>
-                  <h3 className="font-bold text-slate-800 mb-1">{p.title}</h3>
-                  <p className="text-slate-500 text-sm">{p.description}</p>
-                </div>
-              ))}
-            </div>
+        <div className="bg-blue-900 text-white rounded-2xl p-8 md:p-10 max-w-3xl mx-auto text-center">
+          <p className="text-blue-300 text-sm font-semibold uppercase tracking-wide mb-3">
+            Abonament lunar · Pachet complet
+          </p>
+          <h3 className="text-2xl md:text-3xl font-extrabold mb-4">
+            Toate cele 7 componente incluse
+          </h3>
+          <p className="text-blue-200 mb-8 leading-relaxed">
+            Implementare, configurare și personalizare gestionate de echipa noastră. Platforma
+            devine operațională în 14–30 de zile, fără implicare tehnică din partea instituției.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/pricing"
+              className="bg-white text-blue-900 font-bold py-3 px-6 rounded-xl hover:bg-blue-50 transition-colors text-sm"
+            >
+              Vezi structura abonamentului
+            </Link>
+            <Link
+              href="/contact"
+              className="border border-white/40 text-white font-semibold py-3 px-6 rounded-xl hover:bg-white/10 transition-colors text-sm"
+            >
+              Solicită o prezentare
+            </Link>
           </div>
         </div>
       </div>

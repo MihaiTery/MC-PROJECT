@@ -6,63 +6,51 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
-    question: 'Cât durează implementarea?',
+    question: 'Platforma se adresează doar primăriilor?',
     answer:
-      'Un modul individual se implementează în 14–30 de zile calendaristice, în funcție de complexitate și disponibilitatea echipei clientului. Pachetul complet beneficiază de implementare prioritară în 14–21 de zile. Nu sunt necesare modificări tehnice majore în infrastructura existentă. Primăriile, de exemplu, sunt operaționale în mai puțin de o lună.',
+      'Nu. Este destinată instituțiilor publice și organizațiilor cu rol administrativ sau juridic. Poate fi implementată în primării, instituții publice locale, organizații cu atribuții administrative, entități cu rol juridic sau orice structură care gestionează relații cu beneficiari și documente.',
     category: 'general',
+  },
+  {
+    question: 'Se folosesc aplicații cunoscute de utilizatori?',
+    answer:
+      'Da. Platforma utilizează canale digitale deja familiare utilizatorilor, fără a necesita adoptarea unor sisteme complexe noi. Beneficiarii interacționează prin interfețe pe care le știu deja să le folosească, eliminând bariera de adoptare.',
+    category: 'technical',
   },
   {
     question: 'Este nevoie de training?',
     answer:
-      'Nu este nevoie de training tehnic complex. Organizăm 1–2 sesiuni online de maximum 2 ore pentru echipa clientului, cu materiale video și ghiduri PDF în română. Sistemele sunt intuitive și pot fi folosite de oricine știe să trimită un email sau să lucreze cu un smartphone.',
+      'Nu. Platforma este concepută pentru utilizare rapidă. Organizăm o singură sesiune de prezentare de maximum 2 ore pentru echipa clientului, după care sistemul este operațional. Nu sunt necesare cunoștințe tehnice.',
     category: 'general',
   },
   {
-    question: 'Utilizatorii finali trebuie să instaleze aplicații noi?',
+    question: 'Ce include abonamentul?',
     answer:
-      'Nu. Modulele WhatsApp Business și Telegram Bot folosesc aplicații deja instalate pe telefoanele utilizatorilor. Modulul Helpdesk funcționează prin browser, fără instalare. Soluțiile sunt gândite pentru zero fricțiune din partea beneficiarilor finali — fie că sunt cetățeni ai unei comune sau clienți ai unei instituții.',
-    category: 'technical',
-  },
-  {
-    question: 'Se pot cumpăra module separat?',
-    answer:
-      'Da, absolut. Fiecare modul poate fi achiziționat independent. Clientul poate începe cu un singur modul și adăuga altele oricând, fără costuri suplimentare de integrare. Pentru primării, recomandăm să înceapă cu Helpdesk sau WhatsApp Business pentru impact rapid.',
+      'Abonamentul include toate cele 7 componente ale platformei într-un singur pachet: comunicare digitală automatizată, interfață pentru cetățeni/beneficiari, interfață pentru angajați, sistem de sesizări, monitorizare publică, motor de căutare documente și raportare loguri. Nu există costuri suplimentare per componentă.',
     category: 'pricing',
   },
   {
-    question: 'Există reducere pentru plata anuală?',
+    question: 'Există plată anuală?',
     answer:
-      'Da. La plata anuală clientul primește acces pentru 12 luni dar plătește doar 10 — economisește practic 2 luni pe an. Reducerea se aplică atât pentru module individuale cât și pentru pachetul complet Bundle.',
+      'Da. La plata anuală clientul primește acces pentru 12 luni plătind echivalentul a 10 luni — economisind efectiv 2 luni de abonament. Se emite o singură factură anuală, eliminând procesarea lunară.',
     category: 'pricing',
   },
   {
-    question: 'Includeți hardware?',
+    question: 'Cât durează implementarea?',
     answer:
-      'Modulul OCR & Arhivă Digitală poate include opțional un scanner de birou profesional, cu ofertă personalizată. Restul modulelor funcționează integral în cloud, fără hardware suplimentar. Tot ce este necesar este o conexiune la internet.',
-    category: 'technical',
-  },
-  {
-    question: 'Sistemul poate fi adaptat după modelele de documente ale clientului?',
-    answer:
-      'Da. Generatorul de Cereri și Documente este configurat cu modelele oficiale specifice fiecărui client. Importăm și digitalizăm orice formular sau cerere tipizată existentă — inclusiv modelele specifice primăriilor. Adaptarea se face în faza de implementare, fără costuri suplimentare.',
-    category: 'technical',
-  },
-  {
-    question: 'Este potrivit și pentru organizații mici?',
-    answer:
-      'Este construit special pentru organizații cu resurse limitate. Primăriile cu sub 3.000 de locuitori sunt un exemplu perfect — fără departament IT intern, fără bugete mari, fără timp de training îndelungat. Același principiu se aplică oricărei instituții sau organizații publice de dimensiuni reduse.',
+      'Implementarea completă se realizează în 14–30 de zile calendaristice. Echipa noastră gestionează întregul proces: configurare, personalizare după modelele instituției și sesiunea de prezentare pentru angajați. Nu sunt necesare modificări în infrastructura existentă.',
     category: 'general',
   },
   {
-    question: 'Ce se întâmplă cu datele beneficiarilor?',
+    question: 'Ce se întâmplă cu datele?',
     answer:
-      'Toate datele sunt stocate pe servere securizate în UE, conform GDPR. Clientul rămâne operatorul de date, noi suntem procesatorul. Oferim DPA (Data Processing Agreement) semnat și documentație completă pentru conformitate.',
+      'Toate datele sunt stocate pe servere securizate în Uniunea Europeană, cu respectarea deplină a reglementărilor GDPR. Instituția rămâne operatorul de date, platforma acționând ca procesator. Oferim documentație completă pentru conformitate.',
     category: 'technical',
   },
   {
-    question: 'Există un contract de lungă durată?',
+    question: 'Include și hardware?',
     answer:
-      'Abonamentul lunar nu implică un contract pe termen lung — clientul poate renunța oricând cu 30 de zile preaviz. Pentru abonamentul anual, contractul este pe 12 luni cu preaviz de 30 de zile la finalul perioadei. Nu există costuri de ieșire.',
-    category: 'pricing',
+      'Opțional. Componenta de motor de căutare pentru documente scanate poate fi completată cu un pachet hardware: scanner profesional în locație și soluție de backup fizic, la 100 €/lună, cu garanție și mentenanță incluse. Restul platformei funcționează integral în cloud.',
+    category: 'technical',
   },
 ]

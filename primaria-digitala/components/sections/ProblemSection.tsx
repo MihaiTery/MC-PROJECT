@@ -1,93 +1,82 @@
-import { Phone, FileX, AlertCircle, Clock, Building2, Frown } from 'lucide-react'
+import { Building2, Scale, Users, Landmark } from 'lucide-react'
 
-const problems = [
-  {
-    icon: FileX,
-    title: 'Hârtie și dosare fizice',
-    description: 'Tone de cereri, registre și dosare care necesită ore de căutare și risc de pierdere.',
-    color: 'text-red-500',
-    bg: 'bg-red-50',
-  },
-  {
-    icon: Phone,
-    title: 'Telefoane repetitive',
-    description: 'Aceleași întrebări despre program, taxe și acte, care consumă timpul echipelor.',
-    color: 'text-orange-500',
-    bg: 'bg-orange-50',
-  },
-  {
-    icon: AlertCircle,
-    title: 'Solicitări pierdute',
-    description: 'Reclamații și sesizări care ajung pe hârtii volante și dispar fără rezolvare.',
-    color: 'text-rose-500',
-    bg: 'bg-rose-50',
-  },
-  {
-    icon: Clock,
-    title: 'Timp pierdut la ghișeu',
-    description: 'Beneficiari care vin fizic pentru cereri simple ce pot fi rezolvate online.',
-    color: 'text-amber-500',
-    bg: 'bg-amber-50',
-  },
+const audiences = [
   {
     icon: Building2,
-    title: 'Presiunea digitalizării',
-    description: 'Reglementări care impun digitalizarea, fără buget sau suport tehnic adecvat.',
-    color: 'text-violet-500',
-    bg: 'bg-violet-50',
+    title: 'Primării și consilii locale',
+    description:
+      'Instituții administrative locale care gestionează relația cu cetățenii, documentele oficiale și comunicarea publică.',
+    color: 'text-blue-700',
+    bg: 'bg-blue-50',
+    border: 'border-blue-200',
   },
   {
-    icon: Frown,
-    title: 'Beneficiari nemulțumiți',
-    description: 'Lipsa comunicării clare și a transparenței duce la frustrare și neîncredere.',
-    color: 'text-slate-500',
-    bg: 'bg-slate-50',
+    icon: Landmark,
+    title: 'Instituții publice locale',
+    description:
+      'Entități cu atribuții administrative la nivel local sau județean care procesează solicitări și gestionează arhive de documente.',
+    color: 'text-indigo-700',
+    bg: 'bg-indigo-50',
+    border: 'border-indigo-200',
+  },
+  {
+    icon: Scale,
+    title: 'Organizații cu rol juridic',
+    description:
+      'Structuri cu responsabilități juridice sau administrative care necesită trasabilitate, control al documentelor și conformitate.',
+    color: 'text-violet-700',
+    bg: 'bg-violet-50',
+    border: 'border-violet-200',
+  },
+  {
+    icon: Users,
+    title: 'Organizații cu beneficiari publici',
+    description:
+      'Orice organizație care gestionează o relație formalizată cu un public larg și are nevoi de comunicare, raportare și arhivare.',
+    color: 'text-teal-700',
+    bg: 'bg-teal-50',
+    border: 'border-teal-200',
   },
 ]
 
-export default function ProblemSection() {
+export default function ForWhoSection() {
   return (
-    <section className="section bg-white" id="problema">
+    <section className="section bg-white" id="cui-se-adreseaza">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <span className="inline-block text-red-600 font-semibold text-sm uppercase tracking-widest mb-3">
-            Provocarea
+          <span className="inline-block text-blue-700 font-semibold text-sm uppercase tracking-widest mb-3">
+            Cui se adresează
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-            Instituțiile sunt prinse între{' '}
-            <span className="text-red-600">hârtie, telefoane</span> și presiunea digitalizării
+            O soluție pentru orice instituție cu responsabilități publice
           </h2>
           <p className="text-lg text-slate-600">
-            Echipele din organizații publice — primării, instituții locale, entități administrative
-            — se confruntă zilnic cu o realitate dificilă: solicitări în creștere, resurse limitate
-            și o nevoie urgentă de modernizare, fără soluții accesibile și rapide.
+            Platforma este destinată instituțiilor publice și organizațiilor cu rol administrativ
+            sau juridic, indiferent de dimensiune sau structură internă.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {problems.map((p) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {audiences.map((a) => (
             <div
-              key={p.title}
-              className="flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow"
+              key={a.title}
+              className={`flex items-start gap-5 p-6 rounded-2xl border ${a.border} ${a.bg}`}
             >
-              <div className={`p-2.5 rounded-xl ${p.bg} shrink-0`}>
-                <p.icon className={`w-5 h-5 ${p.color}`} />
+              <div className="p-3 bg-white rounded-xl shadow-sm shrink-0">
+                <a.icon className={`w-6 h-6 ${a.color}`} />
               </div>
               <div>
-                <h3 className="font-semibold text-slate-800 mb-1">{p.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{p.description}</p>
+                <h3 className="font-bold text-slate-800 mb-2">{a.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{a.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 bg-gradient-to-r from-red-50 to-orange-50 border border-red-100 rounded-2xl p-8 text-center max-w-3xl mx-auto">
-          <p className="text-xl font-bold text-slate-800 mb-2">
-            „Știm că digitalizarea e necesară, dar nu știm de unde să începem."
-          </p>
-          <p className="text-slate-600">
-            Aceasta este realitatea majorității organizațiilor publice cu care lucrăm — primării,
-            instituții locale, entități administrative. Suntem aici tocmai pentru a schimba asta.
+        <div className="mt-12 bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center max-w-3xl mx-auto">
+          <p className="text-slate-700 text-lg leading-relaxed">
+            Platforma se adaptează la structura și nevoile specifice ale fiecărei organizații.
+            Fiecare implementare este configurată individual.
           </p>
         </div>
       </div>

@@ -8,8 +8,8 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  title = 'Hai să discutăm despre organizația ta',
-  subtitle = 'Fără angajamente, fără jargon tehnic. Doar soluții clare pentru nevoile reale ale clientului.',
+  title = 'Programați o discuție despre organizația dvs.',
+  subtitle = 'Fără angajamente, fără jargon tehnic. O discuție despre nevoile reale ale instituției și despre cum poate fi implementată platforma.',
   variant = 'default',
 }: CTASectionProps) {
   if (variant === 'light') {
@@ -35,15 +35,15 @@ export default function CTASection({
   }
 
   return (
-    <section className="section relative overflow-hidden bg-gradient-to-br from-blue-800 to-blue-950 text-white">
+    <section
+      className="section relative overflow-hidden bg-gradient-to-br from-blue-900 to-blue-950 text-white"
+      id="contact"
+    >
       <div className="absolute inset-0 bg-grid-pattern opacity-100" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl" />
 
       <div className="relative container">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-            Lucrăm cu organizații din toată România
-          </span>
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">{title}</h2>
           <p className="text-xl text-blue-200 mb-10 max-w-2xl mx-auto">{subtitle}</p>
 
@@ -51,18 +51,18 @@ export default function CTASection({
             <Button
               href="/contact"
               size="xl"
-              className="bg-green-500 hover:bg-green-400 text-white font-bold shadow-lg shadow-green-500/30"
+              className="bg-white text-blue-900 hover:bg-blue-50 font-bold shadow-lg"
             >
-              Solicită o prezentare gratuită
+              Solicită o prezentare
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button
-              href="/pricing"
+              href="/contact"
               size="xl"
               variant="outline"
               className="border-white/40 text-white hover:bg-white/10"
             >
-              Cere ofertă personalizată
+              Discută cu un consultant
             </Button>
           </div>
 
@@ -75,16 +75,16 @@ export default function CTASection({
               +40 700 000 000
             </a>
             <a
-              href="mailto:contact@primariadigitala.ro"
+              href="mailto:contact@citydock.ro"
               className="flex items-center gap-2 hover:text-white transition-colors"
             >
               <Mail className="w-4 h-4" />
-              contact@primariadigitala.ro
+              contact@citydock.ro
             </a>
           </div>
 
           <p className="text-blue-300 text-xs mt-6">
-            Răspundem în maximum 24 de ore · Fără obligații · Ofertă personalizată per client
+            Răspundem în maximum 24 de ore · Fără obligații · Propunere adaptată fiecărei organizații
           </p>
         </div>
       </div>

@@ -1,24 +1,22 @@
 import {
-  Headphones,
-  MessageCircle,
-  Send,
+  MessageSquare,
+  Users,
+  Briefcase,
+  MapPin,
+  BarChart2,
+  Search,
   FileText,
-  Scale,
-  ScanLine,
-  Cloud,
-  Bell,
   LucideProps,
 } from 'lucide-react'
 
 const iconMap: Record<string, React.FC<LucideProps>> = {
-  headphones: Headphones,
-  'message-circle': MessageCircle,
-  send: Send,
+  'message-square': MessageSquare,
+  users: Users,
+  briefcase: Briefcase,
+  'map-pin': MapPin,
+  'bar-chart-2': BarChart2,
+  search: Search,
   'file-text': FileText,
-  scale: Scale,
-  scan: ScanLine,
-  cloud: Cloud,
-  bell: Bell,
 }
 
 interface ModuleIconProps extends LucideProps {
@@ -26,6 +24,6 @@ interface ModuleIconProps extends LucideProps {
 }
 
 export default function ModuleIcon({ name, ...props }: ModuleIconProps) {
-  const Icon = iconMap[name] ?? Headphones
+  const Icon = iconMap[name] ?? FileText
   return <Icon {...props} />
 }

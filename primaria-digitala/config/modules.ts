@@ -1,19 +1,11 @@
 export type ModuleId =
-  | 'helpdesk'
-  | 'whatsapp'
-  | 'telegram'
-  | 'docgen'
-  | 'lex-advisor'
-  | 'ocr-archive'
-  | 'mail-cloud'
-  | 'monitoring'
-
-export interface ModulePrice {
-  monthly: number
-  annual: number
-  note?: string
-  custom?: boolean
-}
+  | 'comunicare-digitala'
+  | 'interfata-cetateni'
+  | 'interfata-angajati'
+  | 'sesizari-locatie'
+  | 'barometru-institutional'
+  | 'motor-cautare'
+  | 'raportare-loguri'
 
 export interface Module {
   id: ModuleId
@@ -27,259 +19,170 @@ export interface Module {
   description: string
   longDescription: string
   features: string[]
-  benefits: string[]
   forWho: string[]
-  price: ModulePrice
-  tag?: string
-  popular?: boolean
-  hardwareOptional?: boolean
 }
 
 export const modules: Module[] = [
   {
-    id: 'helpdesk',
-    slug: 'helpdesk-cetateni',
-    title: 'Helpdesk Cetățeni / Primărie',
-    shortTitle: 'Helpdesk Cetățeni',
-    icon: 'headphones',
+    id: 'comunicare-digitala',
+    slug: 'comunicare-digitala',
+    title: 'Canale digitale de comunicare automatizată',
+    shortTitle: 'Comunicare digitală',
+    icon: 'message-square',
     accentColor: 'text-blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-200',
     description:
-      'Sistem de ticketing pentru sesizări, cereri și comunicare între cetățeni și primărie.',
+      'Canale oficiale de comunicare prin aplicații de mesagerie utilizate deja de cetățeni și angajați, configurate pentru transmiterea rapidă a informațiilor.',
     longDescription:
-      'Transformați haosul sesizărilor și cererilor cetățenilor într-un flux organizat și transparent. Fiecare sesizare devine un ticket urmărit, asignat și rezolvat eficient de echipa potrivită din primărie.',
+      'Canale oficiale de comunicare prin aplicații de mesagerie utilizate deja de cetățeni și angajați, configurate pentru transmiterea rapidă a informațiilor și automatizarea interacțiunilor de bază. Instituția devine accesibilă pe canale digitale familiare, fără a impune utilizatorilor adoptarea unor sisteme noi.',
     features: [
-      'Primire sesizări cu poză și locație GPS',
-      'Transformare automată în ticket numerotat',
-      'Asignare internă către departamente',
-      'Istoric complet al solicitărilor',
-      'Comunicare directă cu cetățeanul',
-      'Dashboard pentru primar și secretar',
-      'Notificări automate la actualizare status',
+      'Mesaje automate de întâmpinare',
+      'Distribuire informații generale',
+      'Direcționare către servicii',
+      'Reducerea solicitărilor repetitive',
+      'Actualizări automate pentru beneficiari',
+      'Configurare după fluxurile instituției',
     ],
-    benefits: [
-      'Ordine clară în fluxul de solicitări',
-      'Răspuns mai rapid la cetățeni',
-      'Vizibilitate totală pentru administrație',
-      'Comunitate mai mulțumită',
-      'Dovezi concrete pentru rapoarte de activitate',
-    ],
-    forWho: ['Primar', 'Viceprimar', 'Secretar general', 'Funcționari publici'],
-    price: { monthly: 99, annual: 82, note: 'per primărie' },
-    popular: true,
-    tag: 'Cel mai solicitat',
+    forWho: ['Departament comunicare', 'Secretariat', 'Conducere instituție'],
   },
   {
-    id: 'whatsapp',
-    slug: 'whatsapp-business',
-    title: 'WhatsApp Business Automatizat',
-    shortTitle: 'WhatsApp Business',
-    icon: 'message-circle',
+    id: 'interfata-cetateni',
+    slug: 'interfata-cetateni',
+    title: 'Interfață digitală pentru cetățeni / beneficiari',
+    shortTitle: 'Interfață cetățeni',
+    icon: 'users',
     accentColor: 'text-green-600',
     bgColor: 'bg-green-50',
     borderColor: 'border-green-200',
-    description: 'Canal oficial de comunicare al primăriei prin WhatsApp Business.',
-    longDescription:
-      'Transformați primăria într-un canal de comunicare modern, folosind aplicația pe care cetățenii deja o știu. Automatizați răspunsurile frecvente și comunicați rapid cu întreaga comunitate.',
-    features: [
-      'Mesaj automat de bun venit',
-      'Anunțuri locale cu un click',
-      'Comunicări rapide către cetățeni',
-      'Informații automate despre program, taxe, documente',
-      'Automatizare conversații simple (FAQ)',
-      'Număr verificat oficial WhatsApp Business',
-    ],
-    benefits: [
-      'Folosește o aplicație deja instalată de cetățeni',
-      'Reduce apelurile telefonice repetitive',
-      'Comunicare modernă și accesibilă',
-      'Primăria devine vizibilă și reactivă',
-    ],
-    forWho: ['Primar', 'Departament comunicare', 'Secretariat'],
-    price: { monthly: 79, annual: 66 },
-  },
-  {
-    id: 'telegram',
-    slug: 'telegram-bot',
-    title: 'Telegram Bot Primărie',
-    shortTitle: 'Telegram Bot',
-    icon: 'send',
-    accentColor: 'text-sky-600',
-    bgColor: 'bg-sky-50',
-    borderColor: 'border-sky-200',
     description:
-      'Bot Telegram ca principal canal digital pentru sesizări, cereri și interacțiuni rapide.',
+      'Interfață de comunicare prin care cetățenii sau beneficiarii pot transmite solicitări și informații către instituție.',
     longDescription:
-      'Un bot Telegram dedicat primăriei, activ 24/7, care preia sesizări, cereri și documente de la cetățeni și le transmite automat către departamentele corecte.',
+      'Interfață de comunicare prin care cetățenii sau beneficiarii pot transmite solicitări și informații către instituție, accesibilă prin canale digitale deja familiare. Reduce vizitele fizice și apelurile telefonice repetitive, simplificând relația dintre beneficiar și instituție.',
     features: [
-      'Sesizări cu poză și locație',
-      'Cereri și adeverințe digitale',
-      'Transmitere documente',
-      'Colectare informații structurată',
-      'Notificări automate',
-      'Meniu interactiv cu opțiuni clare',
+      'Transmitere solicitări',
+      'Colectare date structurată',
+      'Raportare nereguli',
+      'Integrare cu sistemul intern',
+      'Notificări automate la actualizare status',
+      'Acces 24/7 fără instalare aplicație nouă',
     ],
-    benefits: [
-      'Rapid de implementat (sub 24h)',
-      'Ușor de folosit pentru orice vârstă',
-      'Potrivit pentru comunități locale mici',
-      'Automatizează relația cetățean–primărie',
-    ],
-    forWho: ['Funcționari publici', 'Departament comunicare', 'Secretariat'],
-    price: { monthly: 69, annual: 57 },
+    forWho: ['Cetățeni', 'Beneficiari servicii', 'Funcționari publici'],
   },
   {
-    id: 'docgen',
-    slug: 'generator-documente',
-    title: 'Generator Cereri și Documente',
-    shortTitle: 'Generator Documente',
-    icon: 'file-text',
+    id: 'interfata-angajati',
+    slug: 'interfata-angajati',
+    title: 'Interfață digitală pentru angajați',
+    shortTitle: 'Interfață angajați',
+    icon: 'briefcase',
     accentColor: 'text-violet-600',
     bgColor: 'bg-violet-50',
     borderColor: 'border-violet-200',
     description:
-      'Sistem care colectează datele cetățeanului și generează automat documente conform modelelor primăriei.',
+      'Instrument intern de suport pentru angajați, care facilitează accesul rapid la informații și proceduri.',
     longDescription:
-      'Eliminați erorile și timpul pierdut la ghișeu. Cetățenii completează un formular simplu, iar sistemul generează automat cererile și documentele conform modelelor oficiale ale primăriei dvs.',
+      'Instrument intern de suport pentru angajați, care facilitează accesul rapid la informații și proceduri. Reduce timpul de căutare a informației și oferă răspunsuri ghidate pentru situații frecvente, fără training complex.',
     features: [
-      'Integrarea modelelor existente de cereri',
-      'Completare automată câmpuri standard',
-      'Generare PDF instant',
-      'Trimitere automată către departamente',
-      'Arhivare digitală indexată',
-      'Semnătură electronică opțională',
+      'Răspunsuri ghidate la întrebări frecvente',
+      'Suport operațional intern',
+      'Reducerea timpului de căutare a informației',
+      'Acces la proceduri și documente interne',
+      'Disponibil în orice moment',
+      'Fără training tehnic suplimentar',
     ],
-    benefits: [
-      'Mai puține erori de completare',
-      'Mai puțin timp pierdut la ghișeu',
-      'Procese administrative mai clare',
-      'Cetățenii pot trimite cereri de acasă',
-    ],
-    forWho: ['Funcționari publici', 'Secretariat', 'Cetățeni'],
-    price: { monthly: 89, annual: 74 },
+    forWho: ['Funcționari publici', 'Secretariat', 'Toți angajații instituției'],
   },
   {
-    id: 'lex-advisor',
-    slug: 'lex-advisor',
-    title: 'Lex Advisor pentru Funcționari',
-    shortTitle: 'Lex Advisor AI',
-    icon: 'scale',
+    id: 'sesizari-locatie',
+    slug: 'sesizari-locatie',
+    title: 'Sistem de sesizări cu poză și locație',
+    shortTitle: 'Sesizări cu locație',
+    icon: 'map-pin',
     accentColor: 'text-amber-600',
     bgColor: 'bg-amber-50',
     borderColor: 'border-amber-200',
     description:
-      'Asistent AI intern pentru funcționarii primăriei, alimentat cu legi, proceduri și documente relevante.',
+      'Sistem prin care utilizatorii pot transmite sesizări clare, însoțite de fotografie și locație, pentru identificarea rapidă a problemelor.',
     longDescription:
-      'Funcționarii primăriei au acum un asistent juridic și procedural disponibil instant. Lex Advisor răspunde rapid la întrebări legislative, ajută la redactarea răspunsurilor și reduce timpul de documentare.',
+      'Sistem prin care utilizatorii pot transmite sesizări clare, însoțite de fotografie și locație, pentru identificarea rapidă a problemelor. Sesizările sunt organizate intern și gestionate eficient de echipa instituției.',
     features: [
-      'Răspunsuri rapide la întrebări juridice/procedurale',
-      'Căutare inteligentă în legislație actualizată',
-      'Suport pentru redactare răspunsuri oficiale',
-      'Explicații clare pe înțelesul funcționarilor',
-      'Actualizări automate la modificări legislative',
-      'Istoric interogări per utilizator',
+      'Transmitere sesizare cu locație precisă',
+      'Atașare fotografie din dispozitiv',
+      'Organizare internă a cazurilor',
+      'Comunicare pentru clarificări',
+      'Urmărire status sesizare',
+      'Raportare periodică a sesizărilor rezolvate',
     ],
-    benefits: [
-      'Reduce timpul de documentare cu până la 70%',
-      'Crește acuratețea răspunsurilor oficiale',
-      'Sprijin pentru funcționarii fără training complex',
-      'Conformitate legislativă îmbunătățită',
-    ],
-    forWho: ['Secretar general', 'Funcționari publici', 'Jurist primărie'],
-    price: { monthly: 119, annual: 99 },
-    tag: 'Inovație AI',
+    forWho: ['Cetățeni', 'Beneficiari', 'Echipa internă de gestionare'],
   },
   {
-    id: 'ocr-archive',
-    slug: 'ocr-arhiva-digitala',
-    title: 'OCR & Arhivă Digitală',
-    shortTitle: 'OCR & Arhivă',
-    icon: 'scan',
+    id: 'barometru-institutional',
+    slug: 'barometru-institutional',
+    title: 'Barometru instituțional și monitorizare publică',
+    shortTitle: 'Monitorizare publică',
+    icon: 'bar-chart-2',
     accentColor: 'text-indigo-600',
     bgColor: 'bg-indigo-50',
     borderColor: 'border-indigo-200',
     description:
-      'Scanare, OCR și indexare digitală pentru documentele fizice din primărie.',
+      'Sistem de monitorizare a mențiunilor relevante despre instituție din spațiul public digital.',
     longDescription:
-      'Digitalizați arhiva fizică a primăriei și accesați orice document în câteva secunde. Sistemul scanează, recunoaște textul și indexează automat fiecare document.',
+      'Sistem de monitorizare a mențiunilor relevante despre instituție din spațiul public digital. Furnizează informații structurate pentru luarea deciziilor de comunicare și identificarea timpurie a subiectelor sensibile.',
     features: [
-      'Scanare documente fizice',
-      'Recunoaștere text OCR de precizie',
-      'Indexare automată inteligentă',
-      'Căutare rapidă full-text în arhivă',
-      'Reducerea erorilor umane',
-      'Hardware scanner inclus opțional',
+      'Monitorizare social media',
+      'Monitorizare presă online',
+      'Alerte de mențiuni relevante',
+      'Identificare teme recurente',
+      'Suport pentru decizie și comunicare',
+      'Raport periodic de activitate',
     ],
-    benefits: [
-      'Documente găsite în câteva secunde',
-      'Arhivă organizată și securizată',
-      'Mai puțin timp pierdut în căutări fizice',
-      'Conformitate cu normele de arhivare electronică',
-    ],
-    forWho: ['Secretar general', 'Funcționari arhivă', 'IT local'],
-    price: { monthly: 89, annual: 74, note: 'hardware scanner – ofertă separată' },
-    hardwareOptional: true,
+    forWho: ['Conducere instituție', 'Departament comunicare', 'Responsabil relații publice'],
   },
   {
-    id: 'mail-cloud',
-    slug: 'mail-hosting-cloud',
-    title: 'Mail, Hosting & Cloud pentru Primărie',
-    shortTitle: 'Mail & Cloud',
-    icon: 'cloud',
+    id: 'motor-cautare',
+    slug: 'motor-cautare',
+    title: 'Motor de căutare pentru documente scanate',
+    shortTitle: 'Căutare documente',
+    icon: 'search',
     accentColor: 'text-teal-600',
     bgColor: 'bg-teal-50',
     borderColor: 'border-teal-200',
     description:
-      'Infrastructură digitală de bază: email instituțional, hosting și stocare cloud.',
+      'Sistem de indexare și căutare rapidă în documente scanate, cu acces controlat și trasabilitate completă.',
     longDescription:
-      'Infrastructura digitală minimă pe care orice primărie ar trebui să o aibă. Email instituțional profesional, hosting securizat și cloud cu backup automat – fără nicio echipă IT internă.',
+      'Sistem de indexare și căutare rapidă în documente scanate, cu acces controlat și trasabilitate completă. Documentele fizice sunt digitalizate, indexate automat și accesibile în câteva secunde, reducând semnificativ timpul pierdut în căutări manuale.',
     features: [
-      'Email instituțional @primaria-[localitate].ro',
-      'Hosting securizat și rapid',
-      'Spațiu cloud organizat pe departamente',
-      'Backup automat zilnic',
-      'Configurare rapidă în 48 ore',
-      'Suport tehnic inclus',
+      'Recunoaștere text OCR de precizie',
+      'Indexare automată inteligentă',
+      'Căutare rapidă full-text în arhivă',
+      'Acces controlat pe categorii',
+      'Istoric complet de acces',
+      'Securizare și backup automat',
     ],
-    benefits: [
-      'Comunicare oficială profesionalizată',
-      'Siguranță și organizare a datelor',
-      'Infrastructură simplă fără echipă IT',
-      'Conformitate GDPR',
-    ],
-    forWho: ['Primar', 'Secretar general', 'Toți angajații primăriei'],
-    price: { monthly: 49, annual: 41, note: 'include până la 20 conturi email' },
+    forWho: ['Secretar general', 'Funcționari arhivă', 'Conducere instituție'],
   },
   {
-    id: 'monitoring',
-    slug: 'monitorizare-online',
-    title: 'Monitorizare Online & Alerte Mențiuni',
-    shortTitle: 'Monitorizare Online',
-    icon: 'bell',
+    id: 'raportare-loguri',
+    slug: 'raportare-loguri',
+    title: 'Raportare săptămânală a logurilor',
+    shortTitle: 'Raportare loguri',
+    icon: 'file-text',
     accentColor: 'text-rose-600',
     bgColor: 'bg-rose-50',
     borderColor: 'border-rose-200',
     description:
-      'Sistem de monitorizare a webului, grupurilor și mențiunilor despre primărie, primar sau comunitate.',
+      'Raport automat privind activitatea documentelor: cine a accesat, cine a scanat, când — trasabilitate completă.',
     longDescription:
-      'Fiți primul care știe când se vorbește despre primărie online. Monitorizare automată a presei locale, grupurilor de Facebook și altor canale digitale, cu alerte instant pentru situații sensibile.',
+      'Raport automat săptămânal privind activitatea documentelor din sistem: cine a accesat documente, cine a scanat, când și ce. Oferă trasabilitate completă și informații clare pentru conducere și auditori.',
     features: [
-      'Monitorizare continuă web și presă locală',
-      'Monitorizare grupuri publice Facebook',
-      'Alerte instant pe email/telefon',
-      'Raport săptămânal pentru primar',
-      'Identificare teme și subiecte sensibile',
-      'Istoric mențiuni exportabil',
+      'Raport automat săptămânal',
+      'Evidență acces documente',
+      'Evidență activitate de scanare',
+      'Trasabilitate completă a activității',
+      'Export în formate standard',
+      'Arhivare automatizată a rapoartelor',
     ],
-    benefits: [
-      'Reacție rapidă la crize de comunicare',
-      'Control mai bun al imaginii publice',
-      'Primarul știe primul ce se întâmplă',
-      'Comunicare proactivă, nu reactivă',
-    ],
-    forWho: ['Primar', 'Viceprimar', 'Departament comunicare'],
-    price: { monthly: 89, annual: 74 },
+    forWho: ['Conducere instituție', 'Auditori interni', 'Responsabil securitate date'],
   },
 ]
 
@@ -290,12 +193,3 @@ export function getModuleBySlug(slug: string): Module | undefined {
 export function getModuleSlugs(): string[] {
   return modules.map((m) => m.slug)
 }
-
-export const totalMonthlyIndividual = modules.reduce(
-  (sum, m) => sum + m.price.monthly,
-  0
-)
-export const totalAnnualIndividual = modules.reduce(
-  (sum, m) => sum + m.price.annual,
-  0
-)
