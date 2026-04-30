@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(Rename-Item *)"
+      "PowerShell(Rename-Item *)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Mihai\\\\IdeaProjects\\\\MC Project\" | Where-Object { $_.Name -match \"primaria|platforma\" } | Select-Object Name)",
+      "PowerShell(cmd /c \"rename \"\"C:\\\\Users\\\\Mihai\\\\IdeaProjects\\\\MC Project\\\\primaria-digitala\"\" platforma-institutionala\" 2>&1; if \\($LASTEXITCODE -eq 0\\) { \"OK\" } else { \"FAILED: $LASTEXITCODE\" })",
+      "PowerShell(Stop-Process *)"
     ]
   }
 }
